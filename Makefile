@@ -1,3 +1,14 @@
+install-carthage:
+	brew remove carthage --force
+	brew install carthage
+
+install-swiftlint:
+	brew remove swiftlint --force
+	brew install swiftlint
+
+install-%:
+	true
+
 test-lint:
 	swiftlint lint --strict 2>/dev/null
 
