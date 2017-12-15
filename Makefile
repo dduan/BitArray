@@ -1,6 +1,20 @@
 test-lint:
 	swiftlint lint --strict 2>/dev/null
 
+test-iOS:
+	xcodebuild -project BitArray.xcodeproj -scheme BitArray -configuration Release \
+	-destination "name=iPhone 7" \
+	clean test
+
+test-macOS:
+	xcodebuild -project BitArray.xcodeproj -scheme BitArray -configuration Release \
+	clean test
+
+test-tvOS:
+	xcodebuild -project BitArray.xcodeproj -scheme BitArray -configuration Release \
+	-destination "name=Apple TV" \
+	clean test
+
 test-carthage:
 	carthage build --no-skip-current --configuration Release --verbose
 	ls Carthage/Build/Mac/BitArray.framework
