@@ -27,4 +27,4 @@ test-carthage:
 	ls Carthage/Build/watchOS/BitArray.framework
 
 test-swiftpm:
-	swift test
+	swift test  
