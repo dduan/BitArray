@@ -9,7 +9,6 @@ class BitArrayTests: XCTestCase {
         XCTAssertEqual(Array(a), [false, false, false, true, true])
     }
 
-
     static var allTests = [
         ("testElementMutation", testElementMutation),
     ]

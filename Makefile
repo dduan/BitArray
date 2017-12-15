@@ -1,3 +1,6 @@
+test-lint:
+	swiftlint lint --strict 2>/dev/null
+
 test-carthage:
 	carthage build --no-skip-current --configuration Release --verbose
 	ls Carthage/Build/Mac/BitArray.framework
