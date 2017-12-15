@@ -1,20 +1,15 @@
 matrix:
     include:
-        - os: osx
-          env: ACTION=lint
-        - os: osx
-          env: ACTION=iOS
-        - os: osx
-          env: ACTION=macOS
-        - os: osx
-          env: ACTION=tvOS
-        - os: osx
-          env: ACTION=carthage
-        - os: osx
-          env: ACTION=swiftpm
+        - env: ACTION=lint HOMEBREW_NO_AUTO_UPDATE=1
+        - env: ACTION=iOS
+        - env: ACTION=macOS
+        - env: ACTION=tvOS
+        - env: ACTION=carthage HOMEBREW_NO_AUTO_UPDATE=1
+        - env: ACTION=swiftpm
 
+os: osx
 language: objective-c
 osx_image: xcode9
 
 script:
-    - install-$ACTION && make test-$ACTION
+    - make install-$ACTION && make test-$ACTION

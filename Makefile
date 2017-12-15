@@ -1,9 +1,9 @@
 install-carthage:
-	brew remove carthage --force
+	brew remove carthage --force || true
 	brew install carthage
 
-install-swiftlint:
-	brew remove swiftlint --force
+install-lint:
+	brew remove swiftlint --force || true
 	brew install swiftlint
 
 install-%:
@@ -23,7 +23,7 @@ test-macOS:
 
 test-tvOS:
 	xcodebuild -project BitArray.xcodeproj -scheme BitArray -configuration Release \
-	-destination "name=Apple TV" \
+	-destination "name=Apple TV 4K" \
 	clean test
 
 test-carthage:
