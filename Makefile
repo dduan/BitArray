@@ -1,0 +1,2 @@
+test-swiftpm:
+	swift test
