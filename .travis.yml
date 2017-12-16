@@ -1,0 +1,15 @@
+matrix:
+    include:
+        - env: ACTION=lint
+        - env: ACTION=carthage
+        - env: ACTION=iOS
+        - env: ACTION=tvOS
+        - env: ACTION=macOS
+        - env: ACTION=swiftpm
+
+os: osx
+language: objective-c
+osx_image: xcode9
+
+script:
+    - make install-$ACTION && make test-$ACTION
