@@ -1,7 +1,7 @@
 matrix:
     include:
-        - env: ACTION=lint
-        - env: ACTION=carthage
+        - env: ACTION=lint HOMEBREW_NO_AUTO_UPDATE=1
+        - env: ACTION=carthage HOMEBREW_NO_AUTO_UPDATE=1
         - env: ACTION=iOS
         - env: ACTION=tvOS
         - env: ACTION=macOS
