@@ -35,6 +35,3 @@ test-tvOS:
 
 test-lint:
 	swiftlint lint --strict 2>/dev/null
-
-# github
-
