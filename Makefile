@@ -21,7 +21,7 @@ test-carthage:
 
 test-iOS:
 	xcodebuild -project BitArray.xcodeproj -scheme BitArray -configuration Release \
-	-destination "name=iPhone 7" \
+	-destination "name=iPhone 7,OS=10.1" \
 	clean test
 
 test-macOS:
