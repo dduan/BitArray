@@ -60,4 +60,4 @@ Include `Sources/BitArray/BitArray.swift` in your project.
 
 ## LICENSE
 
-[MIT][https://github.com/dduan/BitArray/blob/master/LICENSE.md].
+[MIT](https://github.com/dduan/BitArray/blob/master/LICENSE.md).
