@@ -6,7 +6,7 @@ matrix:
         - env: ACTION=tvOS
         - env: ACTION=macOS
         - env: ACTION=swiftpm-macOS
-        - env: ACTION=swiftpm-linuxOS
+        - env: ACTION=swiftpm-linux
           os: linux
           sudo: required
           dist: trusty
