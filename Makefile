@@ -1,3 +1,6 @@
+export SWIFTENV_ROOT := $(HOME)/.swiftenv
+export PATH := $(SWIFTENV_ROOT)/bin:$(SWIFTENV_ROOT)/shims:$(PATH)
+
 install-lint:
 	brew remove swiftlint --force || true
 	brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/6d2b793c15e3aef701a6d256035114ff79bca7f1/Formula/swiftlint.rb
@@ -16,7 +19,8 @@ test-swiftpm-macOS:
 	swift test
 
 test-swiftpm-linux:
-	swift test
+	git clone --depth 1 https://github.com/kylef/swiftenv.git ~/.swiftenv
+	swiftenv install -s
 
 test-carthage:
 	carthage build --no-skip-current --configuration Release --verbose
