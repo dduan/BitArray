@@ -5,16 +5,12 @@ matrix:
         - env: ACTION=iOS
         - env: ACTION=tvOS
         - env: ACTION=macOS
-        - env: ACTION=swiftpm
-        - env: ACTION=swiftpm
+        - env: ACTION=swiftpm-macOS
+        - env: ACTION=swiftpm-linux
           os: linux
           sudo: required
           dist: trusty
-          install:
-            - eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
           language: generic
-          script:
-              swift test
 
 os: osx
 language: objective-c
